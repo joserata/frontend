@@ -1,0 +1,46 @@
+/* Normatividad.css */
+.normatividad-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las cards */
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 1 1 calc(25% - 20px); /* 4 columnas */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+  }
+  
+  .card a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .card a:hover {
+    background-color: #0056b3;
+  }
+  

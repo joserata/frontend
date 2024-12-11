@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Documentacion from "./pages/Documentacion";
+import Normatividad from "./pages/Normatividad";
+import Eventos from "./pages/Eventos";
+import Definiciones from "./pages/Definiciones";
+import Layout from "./components/Layout"; // Importa el Layout
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/documentacion" element={<Documentacion />} />
+          <Route path="/normatividad" element={<Normatividad />} />
+          <Route path="/eventos" element={<Eventos />} />
+          <Route path="/definiciones" element={<Definiciones />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;
